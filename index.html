@@ -210,6 +210,9 @@
 </section>
 
 
+
+
+
 <!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -295,9 +298,9 @@
     <!--/ GIF. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-    <h2 class="title is-3">Anatomy-Informed Segmentation - Expert</h2>
+    <h2 class="title is-3"  style="color: #5b9aeb;" >Anatomy-Informed Segmentation - Expert</h2>
         
-    <h5 class="title is-3">EMR snippet 1 (pseudonymized)</h5>
+    <h5 class="title is-5">EMR snippet 1 (pseudonymized)</h5>
         <!-- <img src="./static/videos/case1.mp4"
             class="interpolation-image"
             alt="Interpolate start reference image."
@@ -312,7 +315,7 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h5 class="title is-3">EMR snippet 2 (pseudonymized)</h5>
+        <h5 class="title is-5">EMR snippet 2 (pseudonymized)</h5>
         <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
           <source src="./static/videos/case2.mp4"
                   type="video/mp4">
@@ -326,83 +329,87 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" style="color: #5b9aeb;">Anatomy-Informed Segmentation - Normal Query</h2>
 
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
+      <!-- Normal Query 1 -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Normal Query 1</h2>
-          <!-- <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p> -->
+          <h5 class="title is-5">Normal Query 1</h5>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/NQ1.mp4"
-                    type="video/mp4">
+            <source src="./static/videos/NQ1.mp4" type="video/mp4">
           </video>
-          <!-- static/images/MRI-Brain-T1Gd_rotate.gif -->
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
+      <!-- Normal Query 2 -->
       <div class="column">
-        <h2 class="title is-3">Normal Query 2</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <!-- <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p> -->
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/NQ2.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+        <div class="content">
+          <h5 class="title is-5">Normal Query 2</h5>
+          <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/NQ2.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
 
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
+      <!-- Normal Query 3 -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Normal Query 3</h2>
-          <!-- <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p> -->
+          <h5 class="title is-5">Normal Query 3</h5>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/NQ3.mp4"
-                    type="video/mp4">
+            <source src="./static/videos/NQ3.mp4" type="video/mp4">
           </video>
-          <!-- static/images/MRI-Brain-T1Gd_rotate.gif -->
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
+      <!-- Normal Query 4 -->
       <div class="column">
-        <h2 class="title is-3">Normal Query 4</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <!-- <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p> -->
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/NQ4.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+        <div class="content">
+          <h5 class="title is-5">Normal Query 4</h5>
+          <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/NQ4.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" style="color: #5b9aeb;">Anatomy-Agnostic Segmentation - Positional Info</h2>
+
+        
+    <h5 class="title is-5 has-text-centered">Sample 1: ask for the visible smallest organ.</h5>
+    <video id="fullbody" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/Ag1.mp4" type="video/mp4">
+    </video>
+    
+    <h5 class="title is-5 has-text-centered">Sample 2: ask for the visible largest organ</h5>
+    <video id="fullbody" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/Ag2.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3" style="color: #5b9aeb;">Corner Cases</h2>
+    <video id="fullbody" autoplay controls muted loop playsinline height="100%">
+      <source src="./static/videos/Corner-Case.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
 
     <!-- Animation. -->
     <!--/ Animation. -->
