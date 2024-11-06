@@ -140,7 +140,7 @@
               <!-- Video Link. -->
               <span class="link-block">
                 <!-- <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA" -->
-                <a href="your youtube video"
+                <a href="https://youtu.be/CvAVgxK9eZI"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -150,7 +150,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/LongchaoDa/SegmentAsYouWish"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -160,13 +160,16 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
+                <a href="#code-section"
+                    class="external-link button is-normal is-rounded is-dark"
+                    onclick="scrollToCodeSection(event)">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Data</span>
                   </a>
+              </span>
+
             </div>
 
           </div>
@@ -368,13 +371,13 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Normal Query 1</h2>
+          <h2 class="title is-3">Normal Query 3</h2>
           <!-- <p>
             Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
             would be impossible without nerfies since it would require going through a wall.
           </p> -->
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/NQ1.mp4"
+            <source src="./static/videos/NQ3.mp4"
                     type="video/mp4">
           </video>
           <!-- static/images/MRI-Brain-T1Gd_rotate.gif -->
@@ -384,7 +387,7 @@
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Normal Query 2</h2>
+        <h2 class="title is-3">Normal Query 4</h2>
         <div class="columns is-centered">
           <div class="column content">
             <!-- <p>
@@ -392,7 +395,7 @@
               samples that fall outside of a bounding box during rendering.
             </p> -->
             <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/NQ2.mp4"
+              <source src="./static/videos/NQ4.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -406,7 +409,7 @@
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <div id="code-section" class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -416,17 +419,43 @@
           </p>
           <!-- # replace with dataset links -->
               <p>
-                <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+                <a href="https://arxiv.org/abs/2104.09125">1. Pancreas-CT</a> This dataset consists of 82 contrast-enhanced abdominal CT volumes, only provides the pancreas label annotated by an experienced radiologist, and all CT scans have no pancreatic tumor.
               </p>
               <p>
-                <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-                both use deformation fields to model non-rigid scenes.
+                <a href="https://drive.google.com/drive/folders/0B0vscETPGI1-Q1h1WFdEM2FHSUE?resourcekey=0-XIVV_7YUjB9TPTQ3NfM17A">2. LiTS</a> contains 131 and 70 contrast-enhanced 3-D abdominal CT scans for training and testing, respectively. The data set was acquired by different scanners and protocols at six different clinical sites, with a largely varying in-plane resolution from 0.55 to 1.0 mm and slice spacing from 0.45 to 6.0 mm.
               </p>
               <p>
-                Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+                <a href="https://kits-challenge.org/kits23/#download-block">3. KiTS</a> It includes 210 training cases and 90 testing cases with annotations provided by the University of Minnesota Medical Center. Each CT scan has one or more kidney tumors.
               </p>
               <p>
-                There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+                <a href="https://github.com/JunMa11/AbdomenCT-1K">4. AbdomenCT-1K</a> It consists of 1112 CT scans from five datasets with liver, kidney, spleen, and pancreas annotations.
+              </p>
+              <p>
+                <a href="https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080890">5. CT-ORG</a> It is composed of 140 CT images containing 6 organ classes, which are from 8 different medical centers. Most of the images exhibit liver lesions, both benign and malignant.
+              </p>
+              <p>
+                <a href="https://chaos.grand-challenge.org/Data/">6. CHAOS</a> It provides 20 patients for multi-organ segmentation. All CT scans have no liver tumor.
+              </p>
+              <p>
+                <a href="https://www.nature.com/articles/s41467-022-30695-9/">7. MSD CT</a> It includes liver, lung, pancreas, colon, hepatic vessel, and spleen tasks for a total of 947 CT scans with 4 organs and 5 tumors.
+              </p>
+              <p>
+                <a href="https://www.synapse.org/Synapse:syn3193805/wiki/217789/">8. BTCV</a> It consists of 50 abdominal CT scans from metastatic liver cancer patients or post-operative ventral hernia patients. They are collected from the Vanderbilt University Medical Center.
+              </p>
+              <p>
+                <a href="https://amos22.grand-challenge.org/">9. AMOS22</a> It is the abbreviation of the multi-modality abdominal multi-organ segmentation challenge of 2022. The AMOS dataset contains 500 CT with voxel-level annotations of 15 abdominal organs.
+              </p>
+              <p>
+                <a href="https://github.com/HiLab-git/WORD/">10. WORD</a> It collects 150 CT scans from 150 patients before the radiation therapy in a single center, all of them are scanned by a SIEMENS CT scanner without appearance enhancement. Each CT volume consists of 159 to 330 slices of 512 × 512 pixels.
+              </p>
+              <p>
+                <a href="https://www.ircad.fr/research/data-sets/liver-segmentation-3d-ircadb-01/">11. 3D-IRCADb</a> It contains 20 venous phase enhanced CT scans. Each CT scan has various annotations, and only annotated organs are tested to validate the model’s generalizability.
+              </p>
+              <p>
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10546353/">12. TotalSegmentator</a> It collects 1024 CT scans randomly sampled from PACS over the timespan of the last 10 years. The dataset contains CT images with different sequences (native, arterial, portal venous, late phase, dual-energy), with and without contrast agent, with different bulb voltages, with different slice thicknesses and resolution and with different kernels.
+              </p>
+              <p>
+                <a href="https://zenodo.org/records/7860267">12. FLARE22Train</a> It is a dataset used as the labeled training set in MICCAI FLARE 2022 Challenge https://flare22.grand-challenge.org/.
               </p>
         </div>
       </div>
@@ -454,10 +483,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://arxiv.org/pdf/2410.12831">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/LongchaoDa" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
